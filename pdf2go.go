@@ -3,6 +3,7 @@ package main
 import (
   "fmt"
   "log"
+  "flag"
   "github.com/BurntSushi/toml"
   "github.com/jung-kurt/gofpdf"
 )
@@ -18,7 +19,20 @@ type Template struct {
 }
 
 func main() {
-  // argsOnly := os.Args[1:]
+  inputFilePtr := flag.String("in", "", "Input file name. Required.")
+  outputFilePtr := flag.String("out", "", "Output file name. Required.")
+  templatePtr := flag.String("template", "CV", "Template file name.")
+
+  flag.Parse()
+
+  if *inputFilePtr == "" {
+    log.Fatal("Input file is required. run 'pdf2go -h' for help.")
+  }
+
+  if *outputFilePtr == "" {
+    log.Fatal("Output file is required. run 'pdf2go -h' for help.")
+  }
+  _ = templatePtr
 
   var template Template
   if _, err := toml.DecodeFile("./layouts/ModelRelease.toml", &template); err != nil {
