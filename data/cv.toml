@@ -1,0 +1,40 @@
+# This is a TOML, for details check out https://github.com/toml-lang/toml
+# And my CV, used as an example for this library
+
+
+[meta]
+title = "CV data for Migsar Navarro"
+file_name = "cv.toml"
+layout = "CV"
+date = 2018-03-29T17:46:09.207Z
+
+[personal]
+name = "Migsar Navarro Santiesteban"
+email = [ "migsar.navarro@gmail.com" ]
+phone = [ "+52 1 55 3191 1288" ]
+dob = 1984-07-18T09:00:00.000-06:00
+pob = "Mexico City"
+
+[[language]]
+  name = "Spanish"
+  proficiency = "Native"
+
+[[language]]
+  name = "English"
+  proficiency = "Bilingual"
+
+[[language]]
+  name = "Portuguese"
+  proficiency = "Professional"
+
+[[language]]
+  name = "French"
+  proficiency = "Professional"
+
+[[language]]
+  name = "Italian"
+  proficiency = "Professional"
+
+[education]
+
+[work]

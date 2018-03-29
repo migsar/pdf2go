@@ -2,9 +2,8 @@ package main
 
 import (
   "fmt"
-  "os"
   "log"
-  "encoding/json"
+  "github.com/BurntSushi/toml"
   "github.com/jung-kurt/gofpdf"
 )
 
@@ -19,24 +18,26 @@ type Template struct {
 }
 
 func main() {
-
-  input, err := os.Open("./ModelRelease.json")
-  if err != nil {
-    log.Fatal(err)
-  }
-
-  dec := json.NewDecoder(input)
+  // argsOnly := os.Args[1:]
 
   var template Template
-  err = dec.Decode(&template);
-  if err != nil {
+  if _, err := toml.DecodeFile("./layouts/ModelRelease.toml", &template); err != nil {
     log.Fatal(err)
   }
-  fmt.Println(template)
+
+  fmt.Println(template.Fields)
 
   doc := gofpdf.New("P", "mm", "A4", "")
+  doc.SetTitle("Model Release", true)
+  doc.SetDisplayMode("fullwidth", "continuous")
+  doc.SetCreator("PDF2Go", true)
+  doc.SetAuthor("PDF2Go", true)
+  doc.SetKeywords("PDF2Go, PDF, Go, generator, templates", true)
   doc.AddPage()
   doc.SetFont("Arial","B", 16)
   doc.Cell(40, 10, "Hola, mundo")
+  doc.SetDrawColor(255, 0, 0)
+  doc.SetLineWidth(2.0)
+  doc.Line(40, 40, 200, 40)
   doc.OutputFileAndClose("test.pdf")
 }

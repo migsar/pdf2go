@@ -1,0 +1,12 @@
+templateName = "ModelRelease"
+[[fields]]
+  name= "date"
+  type= "date"
+
+[[fields]]
+  name= "name"
+  type= "string"
+
+[[fields]]
+  name= "signature"
+  type= "image"
