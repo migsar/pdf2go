@@ -37,4 +37,79 @@ pob = "Mexico City"
 
 [education]
 
+[[event]]
+  from = 2007
+  to = 2012
+  title = "BSc degree in Civil Engineering"
+  institution = "Universidad Nacional Autonoma de Mexico (UNAM)"
+  status = "100% credits"
+
+[[event]]
+  from = 2009
+  to = 2015
+  title = "BSc degree in Computer Engineering"
+  institution = "Universidad Nacional Autonoma de Mexico (UNAM)"
+  status = "Dropout"
+
+[[event]]
+  from = 2007
+  to = 2012
+  title = "Diploma: Open Source Geographic Information Systems"
+  institution = "Instituto de Geografía, UNAM"
+  status = "Completed"
+
 [work]
+
+  [[event]]
+    from = 2016-06
+    to = "now"
+    title = "Senior front-end developer"
+    institution = "Accenture"
+    tools = ""
+    tasks = ""
+    description = ""
+    summary = ""
+    team = ""
+
+  [[event]]
+    from = 2015-12
+    to = 2016-06
+    title = "Lead front-end developer"
+    institution = "Madkting"
+
+  [[event]]
+    from = 2015-09
+    to = 2015-12
+    title = "Team lead and lead developer"
+    institution = "SEDATU"
+
+  [[event]]
+    from = 2014-11
+    to = 2015-04
+    title = "Software developer coordinator (front-end)"
+    institution = "Alsea"
+
+  [[event]]
+    from = 2014-04
+    to = 2016-01
+    title = "Founder and full-stack developer"
+    institution = "Qarmazi Labs"
+
+  [[event]]
+    from = 2013-07
+    to = 2014-04
+    title = "Front-end developer"
+    institution = "SEDATU"
+
+  [[event]]
+    from = 2013-07
+    to = 2014-04
+    title = "Front-end developer"
+    institution = "Digital Coaster"
+
+  [[event]]
+    from = 2010
+    to = 2013
+    title = "Full-stack freelance developer"
+
+[skills]
