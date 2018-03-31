@@ -1,26 +1,17 @@
 package main
 
 import (
-  "fmt"
+  _ "fmt"
   "log"
   "flag"
   "github.com/BurntSushi/toml"
   "github.com/jung-kurt/gofpdf"
+  "github.com/migh/pdf2go/templates"
 )
 
 type PDF struct {
   File *gofpdf.Fpdf
   Filename string
-}
-
-type Field struct {
-  Name string
-  Type string
-}
-
-type Template struct {
- TemplateName string
- Fields []Field
 }
 
 func (pdf *PDF) init() {
@@ -63,12 +54,12 @@ func main() {
   }
   _ = templatePtr
 
-  var template Template
+  var template templates.Template
   if _, err := toml.DecodeFile("./layouts/ModelRelease.toml", &template); err != nil {
     log.Fatal(err)
   }
 
-  fmt.Println(template.Fields)
+  _ = template
 
   doc := &PDF{ gofpdf.New("P", "mm", "A4", ""), *outputFilePtr }
 
