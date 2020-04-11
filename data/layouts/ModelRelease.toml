@@ -1,4 +1,11 @@
 templateName = "ModelRelease"
+
+[[components]]
+  type = "Paragraph"
+  name = ""
+  content = """
+"""
+
 [[fields]]
   name= "date"
   type= "date"

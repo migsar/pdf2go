@@ -1,0 +1,7 @@
+templateName = "Curriculum Vitae"
+
+[[components]]
+  type = "Paragraph"
+  content = ""
+
+[fields]
